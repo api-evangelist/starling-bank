@@ -1,0 +1,43 @@
+generated: '2026-07-23'
+method: derived
+source: openapi/obie-opendata-swagger.json (4xx/5xx) + live bespoke API probes
+format: bespoke
+envelopes:
+- name: oauth_error
+  applies_to: bespoke Developer API authorization failures
+  shape: '{"error": "<code>", "error_description": "<message>"}'
+  example: '{"error":"invalid_token","error_description":"No access token provided in request."}'
+- name: validation_error
+  applies_to: bespoke Developer API resource validation failures
+  shape: '{"errors": [{"message": "<message>"}], "success": false}'
+problems:
+- status: 401
+  code: invalid_token
+  title: Missing or invalid access token
+  detail: No access token provided, or the token is expired/revoked. Authenticate with
+    a valid OAuth2 bearer token.
+  source: live probe GET https://api.starlingbank.com/api/v2/accounts
+- status: 400
+  title: Bad request
+  detail: The request could not be understood (malformed parameters or body).
+  source: openapi/obie-opendata-swagger.json#/paths/~1branches/get/responses/400
+- status: 403
+  title: Forbidden
+  detail: The access token does not carry a scope required for this operation.
+  source: derived from OAuth2 scope model
+- status: 408
+  title: Request timeout
+  detail: The request took too long to complete.
+  source: openapi/obie-opendata-swagger.json
+- status: 429
+  title: Too many requests
+  detail: The resource was requested too often; slow down and retry after backing off.
+  source: openapi/obie-opendata-swagger.json#/paths/~1branches/get/responses/429
+- status: 500
+  title: Internal server error
+  detail: An error occurred on the server; no further information is available.
+  source: openapi/obie-opendata-swagger.json#/paths/~1branches/get/responses/500
+- status: 503
+  title: Service unavailable
+  detail: The service is temporarily unavailable; retry later.
+  source: openapi/obie-opendata-swagger.json#/paths/~1branches/get/responses/503

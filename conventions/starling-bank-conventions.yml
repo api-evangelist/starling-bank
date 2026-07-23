@@ -1,0 +1,42 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.starlingbank.com/docs + official starling-developer-sdk + live probes
+summary: Cross-cutting request/response semantics for the Starling bespoke Developer API
+  (api.starlingbank.com/api/v2).
+authentication:
+  style: OAuth2 bearer access token in the Authorization header
+  ref: authentication/starling-bank-authentication.yml
+idempotency:
+  supported: true
+  mechanism: client-generated resource UID
+  detail: Mutating creates are modelled as idempotent PUTs keyed on a client-supplied
+    UUID in the path — e.g. PUT /api/v2/payments/local (paymentOrderUid) and savings-goal
+    transfers (transferUid). Re-sending the same UID does not create a duplicate, giving
+    safe retries without a separate Idempotency-Key header.
+  header: null
+pagination:
+  style: time-cursor
+  detail: The transaction feed is paged by time — GET /api/v2/feed/account/{accountUid}/category/{categoryUid}
+    accepts a `changesSince` / since-timestamp parameter to fetch only feed items changed
+    after a point in time, rather than offset/limit paging.
+identifiers:
+  style: UUID
+  detail: Resources are addressed by opaque UUIDs (accountUid, categoryUid, feedItemUid,
+    payeeUid, savingsGoalUid), client-generated for creates.
+versioning:
+  style: uri-path
+  current: v2
+  ref: lifecycle/starling-bank-lifecycle.yml
+error_envelope:
+  shape: '{"error": "<code>", "error_description": "<human message>"}'
+  detail: OAuth/authorization failures return a compact error envelope (e.g.
+    {"error":"invalid_token","error_description":"..."}); resource validation errors
+    return an errors[] array of {message} objects.
+  ref: errors/starling-bank-problem-types.yml
+rate_limit_signaling:
+  detail: HTTP 429 is returned when a client requests a resource too often; clients
+    should back off. No documented published quota headers were confirmed.
+transport:
+  tls: TLSv1.3
+  base_url: https://api.starlingbank.com/api/v2
+  sandbox_base_url: https://api-sandbox.starlingbank.com/api/v2

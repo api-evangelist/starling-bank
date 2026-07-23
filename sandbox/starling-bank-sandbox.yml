@@ -1,0 +1,25 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.starlingbank.com/docs + live probe of api-sandbox.starlingbank.com
+summary: Starling provides a full, isolated sandbox environment separate from production,
+  with its own host and self-service test-customer provisioning.
+environments:
+- name: production
+  base_url: https://api.starlingbank.com/api/v2
+  oauth_authorize: https://oauth.starlingbank.com
+  oauth_token: https://token-api.starlingbank.com/oauth/access-token
+- name: sandbox
+  base_url: https://api-sandbox.starlingbank.com/api/v2
+  confirmed: true
+  note: Live — unauthenticated GET /api/v2/accounts returns 401 invalid_token, proving
+    the sandbox host is reachable and enforces OAuth2.
+test_customers:
+  mechanism: sandbox customer simulator
+  detail: Developers create sandbox customers and mint sandbox access tokens from the
+    developer portal, then drive test transactions/feed items against the sandbox host.
+    No real banking data or money is involved.
+notes:
+- Sandbox tokens and personal access tokens are scoped and issued per developer app;
+  never commit them.
+- No fixed "magic" card/account test values are published verbatim by Starling; test
+  state is provisioned per sandbox customer rather than via shared magic identifiers.

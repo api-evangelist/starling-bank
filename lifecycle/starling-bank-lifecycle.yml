@@ -1,0 +1,20 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.starlingbank.com/docs + https://starlingbank.statuspage.io/
+versioning:
+  scheme: uri-path
+  current: v2
+  note: Bespoke Developer API is served under /api/v2; a prior v1 was retired. Open
+    Banking Read/Write follows the OBIE v3.1 path shape.
+  docs: https://developer.starlingbank.com/docs
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal RFC 8594 Sunset/Deprecation-header policy was found published; major
+    version changes are communicated via the developer portal and Developer Slack.
+sla:
+  url: https://www.starlingbank.com/current-account/service-information/api-performance/
+  note: Open Banking API performance/availability statistics are published as required
+    of a UK ASPSP.
+status_page: https://starlingbank.statuspage.io/
+deprecated_operations: []

@@ -1,0 +1,42 @@
+# Starling Bank
+
+> Starling Bank is a UK app-only digital challenger bank (founded 2014, London) holding a full UK banking licence, regulated by the PRA and FCA. Its primary developer surface is a bespoke, developer-friendly RESTful Developer API (accounts, transaction feed, payments, payees, savings goals/spaces, cards, mandates, identity) secured with OAuth2 at api.starlingbank.com, with a full sandbox. As an FCA-authorised ASPSP it also conforms to the UK Open Banking (OBIE) Read/Write standard (AIS/PIS/CBPII) secured with FAPI OAuth2/OIDC, mutual-TLS, and PSD2 SCA.
+
+## APIs
+- [Starling Accounts API](https://developer.starlingbank.com/docs): accounts, identifiers, balances (OAuth2, base https://api.starlingbank.com/api/v2)
+- [Starling Account Holder API](https://developer.starlingbank.com/docs): account-holder profile/type
+- [Starling Transaction Feed API](https://developer.starlingbank.com/docs): real-time feed items, categories, receipts
+- [Starling Payments API](https://developer.starlingbank.com/docs): domestic/scheduled payments, standing orders
+- [Starling Payees API](https://developer.starlingbank.com/docs): payees and payee accounts
+- [Starling Savings Goals API](https://developer.starlingbank.com/docs): savings goals/spaces, round-ups
+- [Starling Cards API](https://developer.starlingbank.com/docs): card details and per-feature controls
+- [Starling Mandates API](https://developer.starlingbank.com/docs): direct debit mandates
+- [Starling Identity API](https://developer.starlingbank.com/docs): authenticated identity and granted token scopes
+- [Open Banking Read/Write](https://developer.starlingbank.com/docs/open-banking): AIS, PIS, CBPII (OBIE v3.1, FAPI + mTLS + PSD2 SCA, TPP-provisioned)
+
+## Auth
+- OAuth2 authorization endpoint: https://oauth.starlingbank.com
+- OAuth2 token endpoint: https://token-api.starlingbank.com/oauth/access-token
+- Authorization-server metadata: https://api.starlingbank.com/.well-known/oauth-authorization-server
+- Sandbox host: https://api-sandbox.starlingbank.com/api/v2
+
+## Specs & Artifacts
+- OpenAPI (OBIE Open Data standard, Swagger 2.0): openapi/obie-opendata-swagger.json
+- Authentication profile: authentication/starling-bank-authentication.yml
+- OAuth authorization-server metadata: well-known/starling-bank-oauth-authorization-server.json
+- Conventions (idempotency, pagination, errors): conventions/starling-bank-conventions.yml
+- Error catalog: errors/starling-bank-problem-types.yml
+- Conformance (OAuth2/OIDC/FAPI/PSD2/OBIE): conformance/starling-bank-conformance.yml
+- Lifecycle & status: lifecycle/starling-bank-lifecycle.yml
+- Sandbox: sandbox/starling-bank-sandbox.yml
+- Packages/SDKs: packages/starling-bank-packages.yml
+
+## Docs
+- [Developer Portal](https://developer.starlingbank.com/)
+- [API Docs](https://developer.starlingbank.com/docs)
+- [Getting Started](https://developer.starlingbank.com/docs/getting-started)
+- [Open Banking](https://developer.starlingbank.com/docs/open-banking)
+- [Developer Community (Slack)](https://developer.starlingbank.com/community)
+- [Official JS SDK](https://github.com/starlingbank/starling-developer-sdk)
+- [Status Page](https://starlingbank.statuspage.io/)
+- [Security disclosure](https://www.starlingbank.com/security/disclosure/)

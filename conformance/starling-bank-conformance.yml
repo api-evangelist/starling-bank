@@ -1,0 +1,39 @@
+generated: '2026-07-23'
+method: searched
+source: https://developer.starlingbank.com/docs/open-banking + review.yml + OpenAPI/auth artifacts
+standards:
+- id: oauth2
+  conforms: true
+  evidence: RFC 8414 authorization-server metadata published; bespoke API secured with
+    OAuth2 bearer tokens (authorization-code + personal access tokens).
+- id: oidc
+  conforms: true
+  evidence: OBIE Read/Write flows use OAuth2/OIDC hybrid flow for AIS/PIS/CBPII consent.
+- id: fapi-1-advanced
+  conforms: true
+  evidence: FCA-authorised ASPSP conformant to OBIE Read/Write, secured to FAPI 1.0
+    Advanced grade with mutual-TLS client authentication.
+- id: psd2
+  conforms: true
+  evidence: PSD2 ASPSP obligations met; strong customer authentication (SCA) enforced
+    on Open Banking flows.
+- id: obie-read-write
+  conforms: true
+  evidence: Conformant to the UK Open Banking Implementation Entity Read/Write standard
+    for AIS, PIS, and CBPII (github.com/OpenBankingUK/read-write-api-specs).
+- id: obie-open-data
+  conforms: false
+  evidence: App-only bank with no branch/ATM estate; no live Open Data endpoint confirmed.
+    The harvested Open Data swagger is the shared OBIE standard, not a Starling contract.
+- id: mutual-tls
+  conforms: true
+  evidence: mTLS client authentication with eIDAS/OBIE certificates on Open Banking
+    Read/Write endpoints.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: Bespoke API returns a bespoke {"error","error_description"} envelope and
+    the Open Data API uses application/prs.openbanking.opendata media types, not
+    application/problem+json.
+- id: fscs-protected
+  conforms: true
+  evidence: UK deposits FSCS-protected; full UK banking licence (SWIFT SRLGGB2L).

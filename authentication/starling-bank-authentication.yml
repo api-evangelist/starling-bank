@@ -1,0 +1,39 @@
+generated: '2026-07-23'
+method: searched
+source: https://api.starlingbank.com/.well-known/oauth-authorization-server + https://developer.starlingbank.com/docs + live 401 probe
+docs: https://developer.starlingbank.com/docs
+summary:
+  types: [oauth2, http]
+  http_scheme: bearer
+  oauth2_flows: [authorizationCode, personal_access_token]
+  surfaces:
+  - bespoke Developer API (api.starlingbank.com) — OAuth2 bearer
+  - Open Banking Read/Write (AIS/PIS/CBPII) — FAPI OAuth2/OIDC + mutual-TLS + PSD2 SCA
+schemes:
+- name: BespokeOAuth2
+  type: oauth2
+  applies_to: Starling bespoke Developer API (api.starlingbank.com/api/v2)
+  flows:
+  - flow: authorizationCode
+    authorizationUrl: https://oauth.starlingbank.com
+    tokenUrl: https://token-api.starlingbank.com/oauth/access-token
+    issuer: https://token-api.starlingbank.com
+    response_types_supported: [code, token]
+  - flow: personal_access_token
+    note: Sandbox and read-only integrations can mint a personal access token in the
+      developer portal instead of running the full authorization-code flow.
+  evidence: RFC 8414 metadata at api.starlingbank.com/.well-known/oauth-authorization-server;
+    unauthenticated GET /api/v2/accounts returns 401 {"error":"invalid_token"} requiring
+    an Authorization bearer header.
+- name: BearerToken
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  applies_to: All bespoke Developer API calls carry Authorization Bearer access tokens.
+- name: OpenBankingFAPI
+  type: oauth2
+  applies_to: OBIE Read/Write (AIS/PIS/CBPII) as an FCA-authorised ASPSP
+  profile: FAPI 1.0 Advanced
+  client_authentication: mutual-TLS (eIDAS/OBIE certificates)
+  strong_customer_authentication: PSD2 SCA (redirect / app-to-app)
+  note: Provisioned to enrolled, certificate-holding TPPs; not publicly probeable.

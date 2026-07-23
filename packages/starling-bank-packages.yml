@@ -1,0 +1,30 @@
+generated: '2026-07-23'
+method: searched
+source: https://registry.npmjs.org/starling-developer-sdk + https://github.com/starlingbank/developer-resources
+packages:
+- language: javascript
+  registry: npm
+  name: starling-developer-sdk
+  version: 1.0.3
+  license: MIT
+  url: https://www.npmjs.com/package/starling-developer-sdk
+  repository: https://github.com/starlingbank/starling-developer-sdk
+  install: npm install starling-developer-sdk
+  official: true
+  description: Official Starling Bank Developer SDK (JavaScript) covering identity,
+    account holder, accounts, address, transaction feed, payments, mandates, payees,
+    cards, savings goals, and OAuth.
+# Community (NOT first-party) libraries listed in Starling's developer-resources for reference only:
+community:
+- language: java
+  name: Simple-SDK-for-Starling-API-v2
+  url: https://github.com/deepinspire/Simple-SDK-for-Starling-API-v2
+  official: false
+- language: dotnet
+  name: StarlingBankClient
+  url: https://github.com/Netizine/StarlingBankClient
+  official: false
+- language: rust
+  name: starling-rs
+  url: https://github.com/shymega/starling-rs
+  official: false

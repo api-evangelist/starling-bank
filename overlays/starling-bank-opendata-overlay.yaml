@@ -1,0 +1,21 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for Starling Bank Open Data API
+  version: 1.0.0
+extends: openapi/obie-opendata-swagger.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-provider: starling-bank
+    x-apievangelist-spec-provenance: OBIE-standard
+    x-apievangelist-note: Shared OBIE Open Data standard (Swagger 2.0), not a Starling
+      proprietary contract. Starling is app-only with no branch/ATM estate; no live
+      Open Data endpoint was confirmed.
+- target: $.info
+  update:
+    x-apievangelist-related-surfaces:
+      bespoke-developer-api: https://api.starlingbank.com/api/v2
+      open-banking-read-write: OBIE v3.1 AIS/PIS/CBPII (TPP-provisioned)
+      authentication: authentication/starling-bank-authentication.yml
+      conventions: conventions/starling-bank-conventions.yml
+      errors: errors/starling-bank-problem-types.yml

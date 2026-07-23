@@ -1,0 +1,25 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: disclosure@starlingbank.com
+Encryption: https://www.starlingbank.com/security/gpg-key.txt
+Preferred-Languages: en
+Canonical: https://www.starlingbank.com/.well-known/security.txt
+Policy: https://www.starlingbank.com/security/disclosure/
+-----BEGIN PGP SIGNATURE-----
+
+iQJQBAEBCAA6FiEESmqJMRomgtYJXUGWGllbkaiz2ssFAmfKz4UcHGRpc2Nsb3N1
+cmVAc3RhcmxpbmdiYW5rLmNvbQAKCRAaWVuRqLPay7jSD/4601BQikRPAaTS9T5q
+6pmwYUFtwy24YO+/NWn45caVcjufxwNAIeE5p/MuFtCgqntU3GvI1AYGvf8K5qH/
+MoIssPAvwOdfQY5qd6kRHByPtK01eshN5MnSYAi7PSmxjX9Zjw3pMg4s2Z6N+3JQ
+xfv4wmTJyjqf0gPXLxWukWY6r/UzEuJgW0BCi+34my5ZU349WaH0rvhg7OFxHqje
+8OxmwBWC4Ip/Raofe4j5EmJjV/hs/RG3yEU6onIn+06t7l2Qjlv4SKl8eIUJF9ca
+X7L8RTM0gY7iaVDEheDAO3hy2QCD4VyZkzPUfxNRnPBjQlb0MNq6CW+PtGpkJRDP
+AFYuXEg9U7HTYnUzq66uB4p6FY5UwiILkDJAn0fn72MXm/KdAdQ5OiFxFcXo3ihc
+3toUdZQxG8Bydwn3Rpm5+zW2Apyo2rowSEEB60KFZqj42hlFF8jTItu4zhavw5se
+sPr4ZBKdbWATOmdtT324A+dLaWzQciRWiOOUR75sytZfnIOF+m3/6AVZhmrUggjA
+PNK87yrB5IP4oolBPL0KXbzjCvi1lQb76+VBw3QPpjMAqJ2UHiugF+bISzCfMh9P
+wGZB6YN3M1XIQIEsJ3IHbaoXHqi4iArsoAzRVD9WxD/TWKfQpguFhfk4juUFYLve
+LYJHnW+rVXJudbBMkyy4XLFmmA==
+=paPd
+-----END PGP SIGNATURE-----

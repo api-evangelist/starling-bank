@@ -255,6 +255,40 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/read-write-api-specs
 common:
+- type: VulnerabilityDisclosure
+  url: security/starling-bank-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/starling-bank-domain-security.yml
+- type: Security
+  url: https://www.starlingbank.com/security/disclosure/
+- type: Authentication
+  url: authentication/starling-bank-authentication.yml
+- type: Packages
+  url: packages/starling-bank-packages.yml
+- type: SDKs
+  url: packages/starling-bank-packages.yml
+- type: WellKnown
+  url: well-known/starling-bank-well-known.yml
+- type: SecurityTxt
+  url: well-known/starling-bank-security.txt
+- type: Conformance
+  url: conformance/starling-bank-conformance.yml
+- type: Lifecycle
+  url: lifecycle/starling-bank-lifecycle.yml
+- type: Conventions
+  url: conventions/starling-bank-conventions.yml
+- type: Idempotency
+  url: conventions/starling-bank-conventions.yml
+- type: ErrorCatalog
+  url: errors/starling-bank-problem-types.yml
+- type: Sandbox
+  url: sandbox/starling-bank-sandbox.yml
+- type: LLMsTxt
+  url: llms/starling-bank-llms.txt
+- type: Overlay
+  url: overlays/starling-bank-opendata-overlay.yaml
+- type: APIReference
+  url: https://developer.starlingbank.com/docs
 - type: Website
   url: https://www.starlingbank.com/
 - type: DeveloperPortal

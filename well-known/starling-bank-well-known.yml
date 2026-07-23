@@ -1,0 +1,35 @@
+generated: '2026-07-23'
+method: searched
+source: live probes of /.well-known/* across Starling hosts
+hosts:
+- host: https://api.starlingbank.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: starling-bank-oauth-authorization-server.json
+    note: RFC 8414 authorization-server metadata for the bespoke Developer API OAuth2.
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://www.starlingbank.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    file: starling-bank-security.txt
+    note: RFC 9116 security.txt (PGP-signed) with disclosure contact + policy.
+- host: https://developer.starlingbank.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    note: Portal is a client-rendered SPA/S3 origin; no well-known surface served.
+- host: https://token-api.starlingbank.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
