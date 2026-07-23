@@ -1,0 +1,286 @@
+aid: starling-bank
+url: https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/apis.yml
+name: Starling Bank
+kind: company
+description: Starling Bank is a UK app-only digital challenger bank founded in 2014 by
+  Anne Boden and headquartered in London, holding a full UK banking licence and authorised
+  and regulated by the Prudential Regulation Authority and the Financial Conduct Authority
+  (FSCS-protected, SWIFT SRLGGB2L). It is a privately held company - not a mutual and not
+  publicly listed - backed by investors including Goldman Sachs, Fidelity, and the Qatar
+  Investment Authority, and it also licenses its core banking platform as Software-as-a-Service
+  under the "Engine by Starling" brand. As an FCA-authorised ASPSP it participates in UK
+  Open Banking / PSD2, but Starling is best known for its own developer-friendly, bespoke
+  RESTful Developer API (accounts, transaction feed, payments, payees, savings goals/spaces,
+  cards, mandates, and identity) served over OAuth2 at api.starlingbank.com with a full
+  sandbox, alongside its Open Banking Read/Write (AIS, PIS, CBPII) conformance to the Open
+  Banking Implementation Entity (OBIE) standard secured with FAPI-grade OAuth2/OIDC, mutual-TLS,
+  and PSD2 strong customer authentication. Starling is a challenger bank and is not one of the
+  nine CMA9 mandated banks.
+accessModel:
+  pricing: free
+  onboarding: self-serve
+  trial: true
+  try_now: false
+  public: false
+  label: Free · Self-serve developer signup with sandbox
+  confidence: high
+  source:
+  - authentication
+  - documentation
+  generated: '2026-07-23'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial Services
+- Banking
+- Open Banking
+- PSD2
+- OBIE
+- United Kingdom
+- Payments
+- Account Information
+- Challenger Bank
+- Fintech
+- FAPI
+created: '2026-07-23'
+modified: '2026-07-23'
+specificationVersion: '0.19'
+apis:
+- aid: starling-bank:starling-accounts-api
+  name: Starling Accounts API
+  description: Bespoke Starling Developer API for retrieving a customer's accounts, account
+    identifiers (sort code / account number), and balances. Served over OAuth2 at the
+    api.starlingbank.com/api/v2 host with a full sandbox at api-sandbox.starlingbank.com.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Accounts
+  - Balances
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+  - type: Sandbox
+    url: https://api-sandbox.starlingbank.com/api/v2
+- aid: starling-bank:starling-account-holder-api
+  name: Starling Account Holder API
+  description: Returns account-holder profile information - the type of account holder
+    (individual, business, joint, sole trader), name, and registered details - from the
+    Starling bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Account Holder
+  - Identity
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-transaction-feed-api
+  name: Starling Transaction Feed API
+  description: The Starling transaction feed (feed items) API exposes real-time transaction
+    activity, feed-item detail, spending categories, receipts, and attachments for an
+    account over the bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Transactions
+  - Feed Items
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-payments-api
+  name: Starling Payments API
+  description: Initiate and manage domestic and scheduled payments, payment orders, and
+    standing orders from a Starling account through the bespoke Developer API, secured
+    with OAuth2 and payment scopes.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Payments
+  - Standing Orders
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-payees-api
+  name: Starling Payees API
+  description: Create, list, and manage payees (beneficiaries) and payee accounts used
+    when initiating payments from a Starling account via the bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Payees
+  - Beneficiaries
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-savings-goals-api
+  name: Starling Savings Goals API
+  description: Create and manage Savings Goals (Spaces), add or withdraw money, and round-up
+    transfers within a Starling account through the bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Savings Goals
+  - Spaces
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-cards-api
+  name: Starling Cards API
+  description: Retrieve card details and control card settings - enabling or disabling
+    the card and per-feature controls (ATM, online, mobile wallet, magstripe, gambling)
+    - via the Starling bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Cards
+  - Card Controls
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-mandates-api
+  name: Starling Mandates API
+  description: List and cancel direct debit mandates on a Starling account through the
+    bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Mandates
+  - Direct Debits
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-identity-api
+  name: Starling Identity API
+  description: Returns the identity and token/authorising-individual context for the
+    authenticated Starling user, including the scopes granted to the access token, via
+    the bespoke Developer API.
+  humanURL: https://developer.starlingbank.com/docs
+  baseURL: https://api.starlingbank.com/api/v2
+  tags:
+  - Identity
+  - OAuth
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs
+  - type: APIReference
+    url: https://developer.starlingbank.com/docs
+- aid: starling-bank:starling-open-data-api
+  name: Starling Open Data API (OBIE Standard)
+  description: UK Open Banking Open Data API - PUBLIC, unauthenticated reference data
+    (personal and business current accounts, and, for banks with a physical estate, ATMs
+    and branches) modelled on the OBIE Open Data standard. Starling is an app-only bank
+    with no branches or ATM estate; no live Open Data endpoint was confirmed for Starling
+    during this review, so the harvested specification is the shared OBIE standard, not
+    a Starling contract.
+  humanURL: https://developer.starlingbank.com/docs/open-banking
+  baseURL: https://api.starlingbank.com/open-banking
+  tags:
+  - Open Data
+  - Reference Data
+  properties:
+  - type: OpenAPI
+    url: openapi/obie-opendata-swagger.json
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs/open-banking
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+- aid: starling-bank:starling-account-transaction-api
+  name: Starling Account and Transaction Information API (AIS, OBIE Read/Write)
+  description: UK Open Banking Read/Write Account and Transaction Information (AIS) API
+    for accessing account, balance, transaction, and product data as an FCA-authorised
+    ASPSP, conformant to the OBIE Read/Write standard and secured with FAPI OAuth2/OIDC,
+    mutual-TLS, and PSD2 strong customer authentication. Base path shown is the OBIE
+    standard shape and was not publicly confirmed for Starling.
+  humanURL: https://developer.starlingbank.com/docs/open-banking
+  baseURL: https://api.starlingbank.com/open-banking/v3.1/aisp
+  tags:
+  - Account Information
+  - AIS
+  - Open Banking
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs/open-banking
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: starling-bank:starling-payment-initiation-api
+  name: Starling Payment Initiation API (PIS, OBIE Read/Write)
+  description: UK Open Banking Read/Write Payment Initiation (PIS) API for initiating
+    domestic and other payments as an FCA-authorised ASPSP, conformant to the OBIE
+    Read/Write standard and secured with FAPI OAuth2/OIDC, mutual-TLS, and PSD2 strong
+    customer authentication. Base path shown is the OBIE standard shape and was not
+    publicly confirmed for Starling.
+  humanURL: https://developer.starlingbank.com/docs/open-banking
+  baseURL: https://api.starlingbank.com/open-banking/v3.1/pisp
+  tags:
+  - Payment Initiation
+  - PIS
+  - Open Banking
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs/open-banking
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+- aid: starling-bank:starling-confirmation-of-funds-api
+  name: Starling Confirmation of Funds API (CBPII, OBIE Read/Write)
+  description: UK Open Banking Read/Write Confirmation of Funds (CBPII) API allowing a
+    card-based payment instrument issuer to confirm whether funds are available, as an
+    FCA-authorised ASPSP, conformant to the OBIE Read/Write standard and secured with
+    FAPI OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication. Base path
+    shown is the OBIE standard shape and was not publicly confirmed for Starling.
+  humanURL: https://developer.starlingbank.com/docs/open-banking
+  baseURL: https://api.starlingbank.com/open-banking/v3.1/cbpii
+  tags:
+  - Confirmation of Funds
+  - CBPII
+  - Open Banking
+  properties:
+  - type: Documentation
+    url: https://developer.starlingbank.com/docs/open-banking
+  - type: APIReference
+    url: https://github.com/OpenBankingUK/read-write-api-specs
+common:
+- type: Website
+  url: https://www.starlingbank.com/
+- type: DeveloperPortal
+  url: https://developer.starlingbank.com/
+- type: Documentation
+  url: https://developer.starlingbank.com/docs
+- type: GettingStarted
+  url: https://developer.starlingbank.com/docs/getting-started
+- type: OpenBanking
+  url: https://developer.starlingbank.com/docs/open-banking
+- type: GitHubOrganization
+  url: https://github.com/starlingbank
+- type: LinkedIn
+  url: https://www.linkedin.com/company/starling-bank
+- type: Blog
+  url: https://www.starlingbank.com/blog/
+- type: StatusPage
+  url: https://starlingbank.statuspage.io/
+- type: Support
+  url: https://developer.starlingbank.com/community
+- type: Compliance
+  url: https://www.starlingbank.com/current-account/service-information/api-performance/
+- type: TermsOfService
+  url: https://www.starlingbank.com/legal/
+- type: PrivacyPolicy
+  url: https://www.starlingbank.com/legal/privacy-notice/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

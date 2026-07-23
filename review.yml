@@ -1,0 +1,122 @@
+aid: starling-bank
+name: Starling Bank
+review:
+  question: >-
+    What is Starling Bank's public API posture - is there a real developer portal, is
+    a live Open Data endpoint confirmed, and what is the Open Banking Read/Write
+    conformance and authentication model?
+  answer: true
+  date: '2026-07-23'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    Starling Bank operates a genuine, well-documented public developer portal at
+    https://developer.starlingbank.com (HTTP 200) with docs at /docs and an Open
+    Banking section at /docs/open-banking. Its PRIMARY public surface is a bespoke
+    RESTful Developer API - not a pure OBIE Read/Write implementation - served over
+    OAuth2. The production host https://api.starlingbank.com/api/v2 and the sandbox
+    host https://api-sandbox.starlingbank.com/api/v2 were both confirmed live: an
+    unauthenticated GET to /accounts returns HTTP 401 with
+    {"error":"invalid_token","error_description":"No access token provided..."},
+    proving the endpoints exist and require an OAuth2 bearer token. The documented
+    resource groups (Accounts, Account Holder, Transaction Feed, Payments, Payees,
+    Savings Goals, Cards, Mandates, Identity) are grounded in Starling's official
+    JavaScript SDK (github.com/starlingbank/starling-developer-sdk).
+
+    As an FCA-authorised ASPSP, Starling also conforms to the UK Open Banking (OBIE)
+    Read/Write standard for Account & Transaction Information (AIS), Payment Initiation
+    (PIS), and Confirmation of Funds (CBPII), secured with FAPI-grade OAuth2/OIDC,
+    mutual-TLS client authentication, and PSD2 strong customer authentication. These
+    Read/Write endpoints are provisioned to enrolled, eIDAS/OBIE-certificate-holding
+    TPPs and are not publicly probeable; the base paths recorded follow the OBIE
+    standard shape and were NOT confirmed live (public probes of /open-banking/v3.1/*
+    returned HTTP 404).
+
+    NO live Open Data endpoint was confirmed for Starling. Starling is an app-only
+    digital challenger bank with no physical branch or ATM estate, and probes of
+    common OBIE Open Data path shapes (/open-banking/v2.x, /opendata/v2.4,
+    /personal-current-accounts) all returned HTTP 404. The Open Data specification
+    harvested into openapi/ is therefore the SHARED OBIE standard
+    (OpenBankingUK/opendata-api-spec-compiled), clearly labelled as the standard and
+    not a Starling contract. Starling is a challenger bank and is not one of the nine
+    CMA9 mandated banks.
+  developerPortal:
+    url: https://developer.starlingbank.com/
+    status: 200
+    documented: true
+  openDataConfirmed: false
+  openDataBaseURL: ""
+  openDataNote: >-
+    No live Open Data endpoint confirmed. Starling is app-only with no branches/ATMs;
+    OBIE Open Data path probes returned HTTP 404.
+  readWriteSpecs:
+    conformant: true
+    provenance: OBIE-standard
+    note: >-
+      OBIE Read/Write (AIS/PIS/CBPII) conformance as an FCA-authorised ASPSP; specs
+      referenced from github.com/OpenBankingUK/read-write-api-specs. No bank-proprietary
+      Read/Write OpenAPI is publicly downloadable; endpoints are TPP-provisioned.
+  specProvenance:
+    - path: openapi/obie-opendata-swagger.json
+      kind: OBIE-standard
+      title: Open Data API
+      version: v1.3
+      swagger: '2.0'
+      source: https://raw.githubusercontent.com/OpenBankingUK/opendata-api-spec-compiled/master/opendata-swagger.json
+      note: >-
+        Shared OBIE Open Data standard specification (Swagger 2.0), NOT a Starling
+        proprietary contract. Harvested verbatim; captured because Starling publishes
+        no downloadable proprietary OpenAPI/Swagger for its bespoke Developer API.
+  transports:
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.starlingbank.com/api/v2
+      documented: true
+      confirmed: true
+      note: Bespoke Starling Developer API; HTTP 401 without OAuth2 token confirms live.
+    - protocol: REST
+      scheme: https
+      baseURL: https://api-sandbox.starlingbank.com/api/v2
+      documented: true
+      confirmed: true
+      note: Starling Developer API sandbox; HTTP 401 without token confirms live.
+    - protocol: REST
+      scheme: https
+      baseURL: https://api.starlingbank.com/open-banking/v3.1/aisp
+      documented: true
+      confirmed: false
+      note: OBIE Read/Write AIS standard path shape; TPP-provisioned, not publicly confirmed (404 on public probe).
+  authModel:
+    bespokeApi: OAuth2 bearer access tokens (personal access tokens + authorization-code flow)
+    openBankingReadWrite: FAPI OAuth2/OIDC + mutual-TLS + PSD2 strong customer authentication (eIDAS/OBIE certificates)
+  authorisation:
+    regulator: FCA / PRA (UK)
+    aspsp: true
+    cma9: false
+    fscsProtected: true
+    swift: SRLGGB2L
+sources:
+  - url: https://developer.starlingbank.com/
+    type: DeveloperPortal
+    note: Live developer portal (HTTP 200).
+  - url: https://developer.starlingbank.com/docs
+    type: Documentation
+    note: API documentation index (HTTP 200).
+  - url: https://developer.starlingbank.com/docs/open-banking
+    type: Documentation
+    note: Open Banking documentation section (HTTP 200).
+  - url: https://github.com/starlingbank/starling-developer-sdk
+    type: SDK
+    note: Official JS SDK; entity classes ground the documented bespoke resource groups.
+  - url: https://github.com/starlingbank/developer-resources
+    type: Documentation
+    note: Official developer resources index (SDKs, starter kits, links).
+  - url: https://github.com/OpenBankingUK/read-write-api-specs
+    type: APIReference
+    note: Shared OBIE Read/Write standard specs (AIS/PIS/CBPII).
+  - url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
+    type: APIReference
+    note: Shared OBIE Open Data standard specs; source of harvested opendata swagger.
+  - url: https://starlingbank.statuspage.io/
+    type: StatusPage
+    note: Live status page (HTTP 200).
