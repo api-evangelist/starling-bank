@@ -1,0 +1,310 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Open Data API",
+    "version": "v1.3"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Branch",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /branches",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/branches",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Branch` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /branches",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/branches",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Branch` data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "ATM",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /atms",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/atms",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `ATM` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /atms",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/atms",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `ATM` data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "PCA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /personal-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/personal-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Personal Current Account` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /personal-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/personal-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Personal Current Account` data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "BCA",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /business-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/business-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Branch Current Account` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /business-current-accounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/business-current-accounts",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Business Current Account` data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "SME",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /unsecured-sme-loans",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/unsecured-sme-loans",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Unsercured SME Lending` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /unsecured-sme-loans",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/unsecured-sme-loans",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Unsercured SME Lending` data"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "CCC",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "GET /commercial-credit-cards",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/commercial-credit-cards",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets a list of all `Commerical Credit Card` objects."
+        },
+        {
+          "info": {
+            "name": "HEAD /commercial-credit-cards",
+            "type": "http"
+          },
+          "http": {
+            "method": "HEAD",
+            "url": "{{baseUrl}}/commercial-credit-cards",
+            "headers": [
+              {
+                "name": "If-Modified-Since",
+                "value": ""
+              },
+              {
+                "name": "If-None-Match",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Gets header information on the current set of `Commerical Credit Card` data"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
