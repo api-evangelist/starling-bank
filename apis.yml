@@ -16,6 +16,18 @@ description: Starling Bank is a UK app-only digital challenger bank founded in 2
   Banking Implementation Entity (OBIE) standard secured with FAPI-grade OAuth2/OIDC, mutual-TLS,
   and PSD2 strong customer authentication. Starling is a challenger bank and is not one of the
   nine CMA9 mandated banks.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: free
   onboarding: self-serve
