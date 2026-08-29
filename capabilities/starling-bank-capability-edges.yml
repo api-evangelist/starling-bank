@@ -1,0 +1,34 @@
+slug: starling-bank
+provider: Starling Bank
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Banking & Capital Markets
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: ATM
+  spec_file: starling-bank-atm-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.8
+  evidence: '"Open Data ATM API" ... GET /atms'
+  reason: Open Banking Open Data endpoint publishing the bank's ATM estate — physical channel/access-point
+    information, which falls under Banking Channels Management (branch, ATM, online). Single undocumented
+    GET keeps confidence below 0.9.
+- tag: Branch
+  spec_file: starling-bank-branch-api-openapi.yml
+  capability_id: BC-1300.50
+  capability_id_l1: BC-1300
+  capability_name: Banking Channels Management
+  confidence: 0.8
+  evidence: '"Open Data Branch API" ... GET /branches'
+  reason: Publishes branch locations/services — branch channel information, mapping to Banking Channels
+    Management. Thin operation detail caps confidence.

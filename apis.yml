@@ -355,6 +355,9 @@ apis:
   - type: APIReference
     url: https://github.com/OpenBankingUK/opendata-api-spec-compiled
 common:
+- type: CapabilityMap
+  url: capabilities/starling-bank-capability-edges.yml
+  name: Starling Bank Business Capability Map
 - type: VulnerabilityDisclosure
   url: security/starling-bank-vulnerability-disclosure.yml
 - type: DomainSecurity
