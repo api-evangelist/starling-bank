@@ -163,6 +163,9 @@ apis:
   baseURL: https://api.starlingbank.com/api/v2
   tags:
   - Savings Goals
+  - Space
+  tags_raw:
+  - Savings Goals
   - Spaces
   properties:
   - type: Documentation
@@ -244,6 +247,10 @@ apis:
   humanURL: https://developer.starlingbank.com/docs/open-banking
   baseURL: https://api.starlingbank.com/open-banking/v3.1/pisp
   tags:
+  - Payment Initiation
+  - PI
+  - Open Banking
+  tags_raw:
   - Payment Initiation
   - PIS
   - Open Banking
