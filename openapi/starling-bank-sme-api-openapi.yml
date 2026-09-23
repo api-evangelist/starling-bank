@@ -1458,6 +1458,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get unsecured sme loans
+      x-summary-source: derived
+      operationId: getUnsecuredSmeLoans
+      x-operation-id-source: derived
     head:
       tags:
       - SME
@@ -1484,3 +1488,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check unsecured sme loans
+      x-summary-source: derived
+      operationId: headUnsecuredSmeLoans
+      x-operation-id-source: derived

@@ -623,6 +623,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get atms
+      x-summary-source: derived
+      operationId: getAtms
+      x-operation-id-source: derived
     head:
       tags:
       - ATM
@@ -649,3 +653,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check atms
+      x-summary-source: derived
+      operationId: headAtms
+      x-operation-id-source: derived

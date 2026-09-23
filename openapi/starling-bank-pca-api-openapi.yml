@@ -2216,6 +2216,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get personal current accounts
+      x-summary-source: derived
+      operationId: getPersonalCurrentAccounts
+      x-operation-id-source: derived
     head:
       tags:
       - PCA
@@ -2242,3 +2246,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check personal current accounts
+      x-summary-source: derived
+      operationId: headPersonalCurrentAccounts
+      x-operation-id-source: derived

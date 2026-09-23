@@ -735,6 +735,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get branches
+      x-summary-source: derived
+      operationId: getBranches
+      x-operation-id-source: derived
     head:
       tags:
       - Branch
@@ -761,3 +765,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check branches
+      x-summary-source: derived
+      operationId: headBranches
+      x-operation-id-source: derived

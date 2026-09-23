@@ -988,6 +988,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get commercial credit cards
+      x-summary-source: derived
+      operationId: getCommercialCreditCards
+      x-operation-id-source: derived
     head:
       tags:
       - CCC
@@ -1014,3 +1018,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check commercial credit cards
+      x-summary-source: derived
+      operationId: headCommercialCreditCards
+      x-operation-id-source: derived

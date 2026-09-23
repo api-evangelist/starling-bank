@@ -2217,6 +2217,10 @@ paths:
                 - title
                 - description
                 additionalProperties: false
+      summary: Get business current accounts
+      x-summary-source: derived
+      operationId: getBusinessCurrentAccounts
+      x-operation-id-source: derived
     head:
       tags:
       - BCA
@@ -2243,3 +2247,7 @@ paths:
                 title: No response
                 type: object
                 properties: {}
+      summary: Check business current accounts
+      x-summary-source: derived
+      operationId: headBusinessCurrentAccounts
+      x-operation-id-source: derived
