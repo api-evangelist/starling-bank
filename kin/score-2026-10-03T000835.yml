@@ -1,24 +1,22 @@
-# Kin Score artifact — starling-bank — 2026-08-27T140727
+# Kin Score artifact — starling-bank — 2026-10-03T000835
 # The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
 ---
 kin_score:
   slug: starling-bank
-  schema_version: 0.15.1
-  scored_at: '2026-08-27'
-  run_ts: 2026-08-27T140727
-  composite: 49.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-03'
+  run_ts: 2026-10-03T000835
+  composite: 46.3
   band: developing
   facets:
-    discoverability: 92.6
-    contract_quality: 26.7
-    governance: 30.3
+    discoverability: 73.2
+    contract_quality: 35.5
+    contract_governance: 18.2
     operational_transparency: 28.9
     developer_ergonomics: 28.6
-    commercial_clarity: 78.6
-    contract_governance: 30.3
     access_clarity: 78.6
   agent_readiness:
-    score: 25.8
+    score: 23.3
     band: agent-aware
     dimensions:
       spec_presence: true
@@ -27,7 +25,7 @@ kin_score:
       mcp_server: false
       auth_clarity: served
       idempotency: na
-      error_semantics: documented
+      error_semantics: derived
       openapi_examples: false
       rate_limit_signal: false
       event_surface_described: false
@@ -44,12 +42,12 @@ kin_score:
     applies: true
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 62.0
+    score: 38.6
     matched_via: tags
   provenance:
     conformance: first-party
     contracts:
-      total: 1
+      total: 6
       derived: 0
       coverage: 0.0
       callable: 0.0
