@@ -54,6 +54,7 @@ tags:
 - Challenger Bank
 - Fintech
 - FAPI
+- Consumer Banking
 tags_raw:
 - Financial Services
 - Banking
@@ -67,6 +68,7 @@ tags_raw:
 - Fintech
 - FAPI
 - Financial-Services
+- Consumer Banking
 created: '2026-07-23'
 modified: '2026-07-23'
 specificationVersion: '0.23'
