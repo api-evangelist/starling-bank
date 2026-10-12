@@ -1,5 +1,5 @@
 generated: '2026-10-12'
-method: none
+method: searched
 source:
 - https://zapier.com/apps/starling-bank/integrations
 - https://n8n.io/integrations/starling-bank/
@@ -9,8 +9,26 @@ checked:
 - https://composio.dev/toolkits/starling-bank
 - https://monid.ai/tools/starling-bank
 - https://n8n.io/integrations/starling-bank/
+- https://www.openbanking.org.uk/regulated-providers/starling-bank/
 - https://zapier.com/apps/starling-bank/integrations
 summary: null
 marketplace_apps: []
-edges: []
+edges:
+- partner_name: UK Open Banking
+  partner: null
+  type: contract
+  channel: regulator-register
+  relationship: standard-participant
+  direction: partner-built
+  evidence: https://www.openbanking.org.uk/regulated-providers/starling-bank/
+  contract_reference:
+    register: UK Open Banking regulated providers (OBL directory)
+    spec_file: null
+    role: Account Providers
+    registered_name: Starling Bank Limited
+    register_id: https://register.fca.org.uk/s/firm?id=001b000002sy7IMAAY
+    matched_domain: starlingbank.com
+    api_families: null
+    detected_by: sweep-standard-registers.py
+    detected: '2026-10-12'
 templates: []
