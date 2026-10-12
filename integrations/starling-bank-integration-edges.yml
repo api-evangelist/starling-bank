@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/starling-bank/integrations
+- https://n8n.io/integrations/starling-bank/
+- https://composio.dev/toolkits/starling-bank
+- https://monid.ai/tools/starling-bank
+checked:
+- https://composio.dev/toolkits/starling-bank
+- https://monid.ai/tools/starling-bank
+- https://n8n.io/integrations/starling-bank/
+- https://zapier.com/apps/starling-bank/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
