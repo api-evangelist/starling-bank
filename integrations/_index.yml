@@ -20,6 +20,6 @@
     matched_domain: starlingbank.com
     api_families: null
     detected_by: sweep-standard-registers.py
-    detected: '2026-10-12'
+    detected: '2026-10-14'
   status: not-a-workflow
   arazzo: null
