@@ -2,10 +2,13 @@
   "repo": "starling-bank",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/starling-bank",
-      "error": "HTTPError"
+      "source": "https://www.starlingbank.com/blog/",
+      "feed_url": "https://www.starlingbank.com/blog/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
