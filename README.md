@@ -1,4 +1,4 @@
-# Starling Bank (starling-bank)
+# Starling Bank
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,67 +64,127 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Starling Bank is a UK app-only digital challenger bank founded in 2014 by Anne Boden, headquartered in London, holding a full UK banking licence and authorised and regulated by the PRA and FCA (FSCS-protected, SWIFT SRLGGB2L). It is a privately held company - not a mutual and not publicly listed - and also licenses its core banking platform as Software-as-a-Service under the "Engine by Starling" brand. As an FCA-authorised ASPSP, Starling participates in UK Open Banking / PSD2, but is best known for its developer-friendly bespoke RESTful Developer API served over OAuth2 at `api.starlingbank.com` with a full sandbox. Starling is a challenger bank and is not one of the nine CMA9 mandated banks.
+Starling Bank is a UK app-only digital challenger bank founded in 2014 by Anne Boden and headquartered in London, holding a full UK banking licence and authorised and regulated by the Prudential Regulation Authority and the Financial Conduct Authority (FSCS-protected, SWIFT SRLGGB2L). It is a privately held company - not a mutual and not publicly listed - backed by investors including Goldman Sachs, Fidelity, and the Qatar Investment Authority, and it also licenses its core banking platform as Software-as-a-Service under the "Engine by Starling" brand. As an FCA-authorised ASPSP it participates in UK Open Banking / PSD2, but Starling is best known for its own developer-friendly, bespoke RESTful Developer API (accounts, transaction feed, payments, payees, savings goals/spaces, cards, mandates, and identity) served over OAuth2 at api.starlingbank.com with a full sandbox, alongside its Open Banking Read/Write (AIS, PIS, CBPII) conformance to the Open Banking Implementation Entity (OBIE) standard secured with FAPI-grade OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication. Starling is a challenger bank and is not one of the nine CMA9 mandated banks.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/starling-bank/refs/heads/main/apis.yml)
+**Areas:** Financial Services · Banking · Open Banking · PSD2 · OBIE · United Kingdom · Payments · Account Information · Challenger Bank · Fintech · FAPI · Consumer Banking
 
-## Tags
+## Starling Bank on APIs.io
 
-- Financial Services
-- Banking
-- Open Banking
-- PSD2
-- OBIE
-- United Kingdom
-- Payments
-- Account Information
-- Challenger Bank
-- Fintech
-- FAPI
+Everything profiled for Starling Bank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/starling-bank/](https://apis.io/providers/starling-bank/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (18)
 
-- **Created:** 2026-07-23
-- **Modified:** 2026-07-23
+- [Starling Accounts API](https://apis.io/apis/starling-bank/starling-accounts-api/) — Bespoke Starling Developer API for retrieving a customer's accounts, account identifiers (sort code / account number), and balances. Served over OAuth2 at…
+- [Starling Account Holder API](https://apis.io/apis/starling-bank/starling-account-holder-api/) — Returns account-holder profile information - the type of account holder (individual, business, joint, sole trader), name, and registered details - from the…
+- [Starling Transaction Feed API](https://apis.io/apis/starling-bank/starling-transaction-feed-api/) — The Starling transaction feed (feed items) API exposes real-time transaction activity, feed-item detail, spending categories, receipts, and attachments for…
+- [Starling Payments API](https://apis.io/apis/starling-bank/starling-payments-api/) — Initiate and manage domestic and scheduled payments, payment orders, and standing orders from a Starling account through the bespoke Developer API, secured…
+- [Starling Payees API](https://apis.io/apis/starling-bank/starling-payees-api/) — Create, list, and manage payees (beneficiaries) and payee accounts used when initiating payments from a Starling account via the bespoke Developer API.
+- [Starling Savings Goals API](https://apis.io/apis/starling-bank/starling-savings-goals-api/) — Create and manage Savings Goals (Spaces), add or withdraw money, and round-up transfers within a Starling account through the bespoke Developer API.
+- [Starling Cards API](https://apis.io/apis/starling-bank/starling-cards-api/) — Retrieve card details and control card settings - enabling or disabling the card and per-feature controls (ATM, online, mobile wallet, magstripe, gambling)…
+- [Starling Mandates API](https://apis.io/apis/starling-bank/starling-mandates-api/) — List and cancel direct debit mandates on a Starling account through the bespoke Developer API.
+- [Starling Identity API](https://apis.io/apis/starling-bank/starling-identity-api/) — Returns the identity and token/authorising-individual context for the authenticated Starling user, including the scopes granted to the access token, via the…
+- [Starling Account and Transaction Information API (AIS, OBIE Read/Write)](https://apis.io/apis/starling-bank/starling-account-transaction-api/) — UK Open Banking Read/Write Account and Transaction Information (AIS) API for accessing account, balance, transaction, and product data as an FCA-authorised…
+- [Starling Payment Initiation API (PIS, OBIE Read/Write)](https://apis.io/apis/starling-bank/starling-payment-initiation-api/) — UK Open Banking Read/Write Payment Initiation (PIS) API for initiating domestic and other payments as an FCA-authorised ASPSP, conformant to the OBIE…
+- [Starling Confirmation of Funds API (CBPII, OBIE Read/Write)](https://apis.io/apis/starling-bank/starling-confirmation-of-funds-api/) — UK Open Banking Read/Write Confirmation of Funds (CBPII) API allowing a card-based payment instrument issuer to confirm whether funds are available, as an…
+- [Starling Bank ATM API](https://apis.io/apis/starling-bank/starling-bank-atm-api/) — Endpoint for getting ATM data
+- [Starling Bank BCA API](https://apis.io/apis/starling-bank/starling-bank-bca-api/) — Endpoint for getting Business Current Account data
+- [Starling Bank Branch API](https://apis.io/apis/starling-bank/starling-bank-branch-api/) — Endpoint for getting Branch data
+- [Starling Bank CCC API](https://apis.io/apis/starling-bank/starling-bank-ccc-api/) — Endpoint for getting Commercial Credit Card data
+- [Starling Bank PCA API](https://apis.io/apis/starling-bank/starling-bank-pca-api/) — Endpoint for getting Personal Current Account data
+- [Starling Bank SME API](https://apis.io/apis/starling-bank/starling-bank-sme-api/) — Endpoint for getting Unsecured SME Loan data
 
-## APIs
+### Published properties
 
-Starling exposes two distinct public API surfaces: its own bespoke Developer API (the primary, developer-friendly surface) and its UK Open Banking (OBIE) conformance as an FCA-authorised ASPSP.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### Bespoke Starling Developer API
+#### Collections (1)
 
-- **Human URL:** [https://developer.starlingbank.com/docs](https://developer.starlingbank.com/docs)
-- **Production Base URL:** `https://api.starlingbank.com/api/v2` (confirmed live - returns HTTP 401 without an OAuth2 access token)
-- **Sandbox Base URL:** `https://api-sandbox.starlingbank.com/api/v2` (confirmed live - HTTP 401 without a token)
-- **Auth:** OAuth2 bearer access tokens (personal access tokens and full OAuth authorization-code flow)
+Postman and Open Collection request collections.
 
-Documented resource groups (grounded in Starling's official JavaScript SDK): Accounts, Account Holder, Transaction Feed (feed items), Payments, Payees, Savings Goals (Spaces), Cards, Mandates (direct debits), and Identity.
+- [Open Data API](https://apis.io/collections/starling-bank/open-obie-opendata-swagger/)
 
-### UK Open Banking (OBIE) Read/Write
+#### Overlays (1)
 
-Starling is an FCA-authorised ASPSP conformant to the Open Banking Implementation Entity (OBIE) Read/Write standard, covering Account & Transaction Information (AIS), Payment Initiation (PIS), and Confirmation of Funds (CBPII), secured with FAPI-grade OAuth2/OIDC, mutual-TLS, and PSD2 strong customer authentication. These endpoints are provisioned to enrolled, certificate-holding TPPs; the base paths listed follow the OBIE standard shape and were not publicly confirmed during this review.
+OpenAPI overlays, including conversational phrasing for each operation.
 
-### UK Open Banking Open Data
+- [Starling Bank Opendata Overlay](https://apis.io/overlays/starling-bank/starling-bank-opendata-overlay/)
 
-The OBIE Open Data standard covers public, unauthenticated reference data (personal / business current accounts, and, for banks with a physical estate, ATMs and branches). Starling is app-only with no branch or ATM estate, and no live Open Data endpoint was confirmed for Starling. The harvested spec in `openapi/` is the shared OBIE Open Data standard, not a Starling contract.
+#### Security (3)
 
-## Common Properties
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Starling Bank Authentication](https://apis.io/security/starling-bank/starling-bank-authentication/)
+- [Starling Bank Domain Security](https://apis.io/security/starling-bank/starling-bank-domain-security/)
+- [Starling Bank Vulnerability Disclosure](https://apis.io/security/starling-bank/starling-bank-vulnerability-disclosure/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.starlingbank.com/)
-- [Developer Portal](https://developer.starlingbank.com/)
 - [Documentation](https://developer.starlingbank.com/docs)
-- [Getting Started](https://developer.starlingbank.com/docs/getting-started)
-- [Open Banking](https://developer.starlingbank.com/docs/open-banking)
-- [GitHub Organization](https://github.com/starlingbank)
-- [LinkedIn](https://www.linkedin.com/company/starling-bank)
+- [Getting started](https://developer.starlingbank.com/docs/getting-started)
+- [API reference](https://developer.starlingbank.com/docs)
+- [Support](https://developer.starlingbank.com/community)
 - [Blog](https://www.starlingbank.com/blog/)
-- [Status Page](https://starlingbank.statuspage.io/)
-- [Support / Community](https://developer.starlingbank.com/community)
-- [API Performance / Compliance](https://www.starlingbank.com/current-account/service-information/api-performance/)
-- [Terms of Service](https://www.starlingbank.com/legal/)
-- [Privacy Policy](https://www.starlingbank.com/legal/privacy-notice/)
+- [Security](https://www.starlingbank.com/security/disclosure/)
+- [Compliance](https://www.starlingbank.com/current-account/service-information/api-performance/)
+- [Terms of service](https://www.starlingbank.com/legal/)
+- [Privacy policy](https://www.starlingbank.com/legal/privacy-notice/)
+- [GitHub](https://github.com/starlingbank)
+- [Status](https://starlingbank.statuspage.io/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 46.3** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 35.5 |
+| Contract governance | 18.2 |
+| Operational transparency | 28.9 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 78.6 |
+
+**Agent readiness 24.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | na |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | — |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 38.6** — Banking & Open Finance
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/starling-bank/](https://apis.io/providers/starling-bank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Starling Bank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/starling-bank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
